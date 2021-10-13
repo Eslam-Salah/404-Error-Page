@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: -webkit-repeating-linear-gradient(
+    -45deg,
+    #71b7e6,
+    #69a6ce,
+    #b98acc,
+    #ee8176,
+    #b98acc,
+    #69a6ce,
+    #9b59b6
+  );
+  background-size: 400%;
+  font-family: "poppins", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-page {
+  text-align: center;
+  width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.error-page .content {
+  width: 600px;
+}
+
+.content h2 {
+  font-size: 20vw;
+  position: relative;
+}
+
+.content h2::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: -webkit-repeating-linear-gradient(
+    -45deg,
+    #71b7e6,
+    #69a6ce,
+    #b98acc,
+    #ee8176,
+    #b98acc,
+    #69a6ce,
+    #9b59b6
+  );
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.25);
+  animation: animate 8s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0 100%;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.content h4 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  position: relative;
+}
+
+.content h4::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.4);
+}
+
+.content p {
+  font-size: 1.2em;
+  color: #0d0d0d;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.content .btns a {
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 10px 30px 10px;
+  border: 2px solid #69a6ce;
+  color: #69a6ce;
+  font-weight: 500;
+  padding: 10px 25px;
+  border-radius: 25px;
+  transition: all 0.5s ease;
+}
+
+.content .btns a:hover {
+  color: #fff;
+  background-color: #69a6ce;
+}
+
+@media (max-width: 767px) {
+  .error-page {
+    width: 600px;
+  }
+  .error-page .content {
+    width: 500px;
+  }
+}
